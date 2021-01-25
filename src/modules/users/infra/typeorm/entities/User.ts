@@ -35,7 +35,10 @@ class User {
   getAvatarUrl(): string | null {
     return this.avatar
       ? `${process.env.APP_API_URL}/files/${this.avatar}`
-      : null;
+      : `https://ui-avatars.com/api/?size=128&background=FF9900&color=fff&name=${this.name.replace(
+          ' ',
+          '%20',
+        )}`;
   }
 }
 
