@@ -34,6 +34,8 @@ export default class ListProviderMonthAvailabilityService {
       },
     );
 
+    const currentDate = new Date(Date.now());
+
     const numberOfDaysInMonth = getDaysInMonth(new Date(year, month - 1));
 
     const eachDayArray = Array.from(
@@ -53,7 +55,7 @@ export default class ListProviderMonthAvailabilityService {
       return {
         day,
         available:
-          isAfter(compareDate, new Date()) && hasAppointmentInDay.length < 10,
+          isAfter(compareDate, currentDate) && hasAppointmentInDay.length < 10,
       };
     });
 
