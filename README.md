@@ -21,31 +21,31 @@
 
 **RF** (Requisitos funcionais)
 
-  - [x] O usuário deve poder atualizar seu nome, email e senha;
+- [x] O usuário deve poder atualizar seu nome, email e senha;
 
 **RN** (Regras de negócio)
 
-  - [x] O usuário não pode alterar seu email para um email já utilizado;
-  - [x] Para atualizar sua senha, o usuário deve informar a senha antiga;
-  - [x] Para atualizar sua senha, o usuário deve confirmar a nova senha;
+- [x] O usuário não pode alterar seu email para um email já utilizado;
+- [x] Para atualizar sua senha, o usuário deve informar a senha antiga;
+- [x] Para atualizar sua senha, o usuário deve confirmar a nova senha;
 
 # Painel do prestador
 
 **RF** (Requisitos funcionais)
 
-  - [x] O usuário deve poder listar seus agendamentos de um dia específico;
-  - [ ] O prestador deve receber uma notificação sempre que houver um novo agendamento;
-  - [ ] O prestador deve poder visualizar as notificações não lidas;
+- [x] O usuário deve poder listar seus agendamentos de um dia específico;
+- [ ] O prestador deve receber uma notificação sempre que houver um novo agendamento;
+- [ ] O prestador deve poder visualizar as notificações não lidas;
 
 **RNF** (Requisitos não funcionais)
 
-  - [x] Os agendamentos do prestador no dia devem ser armazenados em cache;
-  - [x] As notificações do prestador devem ser armazinadas no MongoDB;
-  - [ ] As notificações do prestador devem ser enviadas em tempo-real utilizando Socket.io;
+- [x] Os agendamentos do prestador no dia devem ser armazenados em cache;
+- [x] As notificações do prestador devem ser armazinadas no MongoDB;
+- [ ] As notificações do prestador devem ser enviadas em tempo-real utilizando Socket.io;
 
 **RN** (Regras de negócio)
 
-  - [x] A notificação deve ter um status de lida ou não-lida para que o prestador possa controlar;
+- [x] A notificação deve ter um status de lida ou não-lida para que o prestador possa controlar;
 
 # Agendamento de serviços
 
@@ -67,3 +67,21 @@
 - [x] O usuário não pode agendar em um horário já ocupado;
 - [x] O usuário não pode agendar em um horário que já passou;
 - [x] O usuário não pode agendar um horário consigo mesmo;
+
+# Sessões de usuários
+
+**RF**
+
+- [ ] Usuários devem ser capazes de se autenticar;
+- [ ] Usuários devem ser capazes de gerar um novo token se o anterior expirar;
+
+**RN**
+
+- [ ] O usuário deve receber um token JWT e um token para gerar outro token JWT quando o mesmo expirar;
+- [ ] Um novo refresh token deve ser gerado no momento que um novo JWT token for gerado e o antigo deve ser inválidado;
+- [ ] O token JWT deve expirar a cada 8 horas;
+- [ ] O refresh token deve expirar a cada 16 horas;
+
+# Criação de usuário
+
+- [ ] Usuários devem receber um email de confirmação;
